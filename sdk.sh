@@ -6,13 +6,8 @@ python -m venv openai-env
 source openai-env/bin/activate
 pip install --upgrade openai
 
-# Read the .env file
+# Read the .env file and set the environment variables
 
 if [ -f .env ]; then
   export "$(cat .env | xargs)"
 fi
-
-# Set the OPENAI_API_KEY
-export OPENAI_API_KEY=$OPENAI_API_KEY
-
-
